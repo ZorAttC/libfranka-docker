@@ -1,11 +1,11 @@
 # libfranka-docker
-Docker Image with installed libfranka v0.10.0.
+Docker Images with installed libfranka v0.10.0 and ROS 2 extensions.
 
-To build the container, run 
+To build the containers, run 
 
 	docker-compose up
 
-in the `docker_launch_files` directory. To enable display mounting, run
+in the respective `docker_launch_files` directory. To enable display mounting, run
 
 	xhost +local:docker
 	
