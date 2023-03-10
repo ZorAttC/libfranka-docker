@@ -22,12 +22,15 @@ cd /docker_volume
 if [ ! -d "franka_ros2_ws" ]
 then 
     mkdir -p franka_ros2_ws/src
-    source /opt/ros/foxy/setup.bash
     cd franka_ros2_ws
     git clone https://github.com/frankaemika/franka_ros2.git src/franka_ros2
+    source /opt/ros/foxy/setup.sh
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/docker_volume/libfranka/build
     source install/setup.sh
 fi
+
+source install/setup.sh
+source /opt/ros/foxy/setup.sh
 
 echo "Attaching to container"
 exec "$@"

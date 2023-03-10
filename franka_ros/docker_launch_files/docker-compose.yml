@@ -1,14 +1,14 @@
 version: "2"
 
 services:
-  franka_ros2_image:
+  franka_ros_image:
     build:
       context: .
       dockerfile: Dockerfile
       
-    image: franka_ros2:0.10.0
+    image: franka_ros:0.10.0
     
-    container_name: u20.04-franka_ros2 
+    container_name: u20.04-franka_ros 
 
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix    
