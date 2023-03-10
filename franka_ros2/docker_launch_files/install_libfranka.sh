@@ -27,10 +27,11 @@ then
     source /opt/ros/foxy/setup.sh
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/docker_volume/libfranka/build
     source install/setup.sh
+else
+    cd franka_ros2_ws
+    source install/setup.sh
+    source /opt/ros/foxy/setup.sh
 fi
-
-source install/setup.sh
-source /opt/ros/foxy/setup.sh
 
 echo "Attaching to container"
 exec "$@"

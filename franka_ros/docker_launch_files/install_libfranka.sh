@@ -30,10 +30,11 @@ then
     rosdep install --from-paths src --ignore-src --rosdistro noetic -y --skip-keys libfranka
     catkin_make -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/docker_volume/libfranka/build
     source devel/setup.sh
+else 
+    cd catkin_ws
+    source /opt/ros/noetic/setup.sh
+    source devel/setup.sh
 fi
-
-source /opt/ros/noetic/setup.sh
-source devel/setup.sh
 
 echo "Attaching to container"
 exec "$@"
