@@ -9,4 +9,4 @@ in the respective `docker_launch_files` directory. To enable display mounting, r
 
 	xhost +local:docker
 	
-on the host machine.
+on the host machine. Using the VS Code [Dev Container](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension is recommended.
