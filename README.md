@@ -5,7 +5,7 @@ To build the containers, run
 
 	docker-compose up
 
-in the respective `docker_launch_files` directory. The only requirements on the host machine is to have a realtime capable kernel and [Docker](https://docs.docker.com/get-docker/) with [Compose](https://docs.docker.com/compose/install/) plugin installed. To enable display mounting (e.g. for RVIZ), run
+in the respective `docker_launch_files` directory. The only requirements on the host machine is to have a realtime capable kernel and to have [Docker](https://docs.docker.com/get-docker/) with [Compose](https://docs.docker.com/compose/install/) plugin installed. To enable display mounting (e.g. for RVIZ), run
 
 	xhost +local:docker
 	
