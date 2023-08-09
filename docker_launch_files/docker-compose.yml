@@ -1,0 +1,64 @@
+version: "2"
+
+services:
+
+  franka_ros:
+
+    build:
+      context: .
+      dockerfile: Dockerfile_ros
+      
+    image: libfranka:franka_ros
+    
+    container_name: u20.04-franka_ros 
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix    
+      - /dev:/dev                        
+      - ../docker_volume:/docker_volume 
+
+    environment:
+      - DISPLAY=$DISPLAY
+      - TZ=Europe/London
+      - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+    
+    network_mode: host
+    
+    privileged: true
+
+    cap_add:
+      - SYS_NICE
+    
+    tty: true
+
+
+  franka_ros2:
+
+    build:
+      context: .
+      dockerfile: Dockerfile_ros2
+      
+    image: libfranka:franka_ros2
+    
+    container_name: u22.04-franka_ros2 
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw    
+      - /dev:/dev                        
+      - ../docker_volume:/docker_volume 
+      - "$XAUTH:$XAUTH"
+
+    environment:
+      - DISPLAY=$DISPLAY
+      - TZ=Europe/London
+      - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+      - XAUTHORITY=$XAUTH
+    
+    network_mode: host
+    
+    privileged: true
+
+    cap_add:
+      - SYS_NICE
+    
+    tty: true

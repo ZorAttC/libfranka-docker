@@ -1,0 +1,9 @@
+[submodule "docker_volume/libfranka"]
+	path = docker_volume/libfranka
+	url = https://github.com/frankaemika/libfranka.git
+[submodule "docker_volume/catkin_ws/src/franka_ros"]
+	path = docker_volume/catkin_ws/src/franka_ros
+	url = https://github.com/frankaemika/franka_ros.git
+[submodule "docker_volume/ros2_ws/src/franka_ros2"]
+	path = docker_volume/ros2_ws/src/franka_ros2
+	url = https://github.com/frankaemika/franka_ros2.git

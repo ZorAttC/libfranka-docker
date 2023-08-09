@@ -1,12 +1,7 @@
 #!/bin/bash
 
 ### LIBFRANKA
-cd /docker_volume
-if [ ! -d "libfranka" ]
-then 
-    git clone --recursive https://github.com/frankaemika/libfranka --branch 0.10.0 
-fi
-cd libfranka
+cd /docker_volume/libfranka
 
 if [ ! -d "build" ]
 then 
@@ -19,22 +14,18 @@ fi
 
 
 ### FRANKA ROS
-cd /docker_volume
-if [ ! -d "catkin_ws" ]
+cd /docker_volume/catkin_ws
+source /opt/ros/noetic/setup.sh
+if [ ! -d "build" ]
 then 
-    mkdir -p catkin_ws/src
-    cd catkin_ws
-    source /opt/ros/noetic/setup.sh
-    catkin_init_workspace src
-    git clone --recursive https://github.com/frankaemika/franka_ros src/franka_ros
+    catkin init
     rosdep install --from-paths src --ignore-src --rosdistro noetic -y --skip-keys libfranka
     catkin_make -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/docker_volume/libfranka/build
     source devel/setup.sh
-else 
-    cd catkin_ws
-    source /opt/ros/noetic/setup.sh
-    source devel/setup.sh
 fi
+source devel/setup.sh
+
+cd /docker_volume
 
 echo "Attaching to container"
 exec "$@"
