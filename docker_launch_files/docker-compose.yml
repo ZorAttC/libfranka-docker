@@ -46,13 +46,11 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw    
       - /dev:/dev                        
       - ../docker_volume:/docker_volume 
-      - "$XAUTH:$XAUTH"
 
     environment:
       - DISPLAY=$DISPLAY
       - TZ=Europe/London
       - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-      - XAUTHORITY=$XAUTH
     
     network_mode: host
     
