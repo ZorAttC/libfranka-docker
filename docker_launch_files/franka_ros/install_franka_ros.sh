@@ -18,7 +18,7 @@ cd /docker_volume/catkin_ws
 source /opt/ros/noetic/setup.sh
 if [ ! -d "build" ]
 then 
-    catkin init
+    catkin_init_workspace src
     rosdep install --from-paths src --ignore-src --rosdistro noetic -y --skip-keys libfranka
     catkin_make -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/docker_volume/libfranka/build
     source devel/setup.sh

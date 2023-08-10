@@ -11,16 +11,19 @@ RUN apt-get update -y &&\
         python3-pip \
         build-essential \
         libeigen3-dev \
-        libpoco-dev \
+        libpoco-dev
+
+### ROS setup
+RUN apt-get update -y &&\
+    apt-get install -y \
         ros-noetic-rviz
-    
 
 ### Install display mounting tools
 RUN apt-get update -y &&\
     apt-get install -y  \
         python3-tk \
         python3-gi-cairo
-    
+
 
 ### Set Working Directory    
 WORKDIR /docker_volume

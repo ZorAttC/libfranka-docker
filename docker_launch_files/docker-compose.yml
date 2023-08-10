@@ -5,8 +5,8 @@ services:
   franka_ros:
 
     build:
-      context: .
-      dockerfile: Dockerfile_ros
+      context: ./franka_ros
+      dockerfile: Dockerfile
       
     image: libfranka:franka_ros
     
@@ -35,8 +35,8 @@ services:
   franka_ros2:
 
     build:
-      context: .
-      dockerfile: Dockerfile_ros2
+      context: ./franka_ros2
+      dockerfile: Dockerfile
       
     image: libfranka:franka_ros2
     
