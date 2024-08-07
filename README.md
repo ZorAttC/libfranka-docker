@@ -18,6 +18,12 @@ Get the repository with
 
 The libraries `libfranka`, `franka_ros` and `franka_ros2` will be pulled as submodules upon cloning.
 
+You might want to make sure to have the latest commit of all submodules by running
+
+	git submodule update --init --recursive
+
+ 
+
 ## Usage
 
 In the terminal, `cd` to the `docker_launch_files` directory. Dependent on whether you want to use franka_ros or franka_ros2, run either of the following
