@@ -33,7 +33,7 @@ In the terminal, `cd` to the `docker_launch_files` directory. Dependent on wheth
 
 or run
 
-	docker-compose up
+	docker compose up
 
 to start both containers.
 
