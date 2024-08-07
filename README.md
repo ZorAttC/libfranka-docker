@@ -41,7 +41,7 @@ To enable display mounting (e.g. for RVIZ or Gazebo), run
 
 	xhost +local:docker
 	
-on the host machine. For Windows machines instead, install [VcXsrv](https://sourceforge.net/projects/vcxsrv/) on your machine and start it.
+on the host machine.
 
 ## Remarks
 
