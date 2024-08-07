@@ -18,8 +18,8 @@ The libraries `libfranka`, `franka_ros` and `franka_ros2` will be pulled as subm
 
 In the terminal, `cd` to the `docker_launch_files` directory. Dependent on whether you want to use franka_ros or franka_ros2, run either of the following
 
-	docker-compose run franka_ros
-	docker-compose run franka_ros2
+	docker compose run franka_ros
+	docker compose run franka_ros2
 
 or run
 
