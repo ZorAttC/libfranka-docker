@@ -8,7 +8,7 @@ Docker Images for portable [libfranka](https://frankaemika.github.io/docs/libfra
 
 ## Requirements
 
-The use of this repo requires [Docker](https://docs.docker.com/engine/install/) and the [Docker Compose Plugin](https://docs.docker.com/compose/install/linux/) of minimum version 2. It is recommended to use Ubuntu as underlying operating system. However, for the use on Windows, a dedicated branch windows exists.
+The use of this repo requires [Docker](https://docs.docker.com/engine/install/) and the [Docker Compose Plugin](https://docs.docker.com/compose/install/linux/) of minimum version 2. It is recommended to use Ubuntu as underlying operating system or at least a suitable WSL environment.
 
 ## Installation
 
