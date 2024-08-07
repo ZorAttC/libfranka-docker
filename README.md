@@ -16,7 +16,7 @@ The libraries `libfranka`, `franka_ros` and `franka_ros2` will be pulled as subm
 
 ## Usage
 
-In the terminal, cd to docker_launch_files. Dependent on whether you want to use franka_ros or franka_ros2, run either of the following
+In the terminal, `cd` to the `docker_launch_files` directory. Dependent on whether you want to use franka_ros or franka_ros2, run either of the following
 
 	docker-compose run franka_ros
 	docker-compose run franka_ros2
