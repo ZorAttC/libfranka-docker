@@ -38,6 +38,7 @@ on the host machine. For Windows machines instead, install [VcXsrv](https://sour
 * The workspace in the container mirrors the [docker_volume](/docker_volume/) directory in a respective docker volume, such that changes made in the container are also visible on your host machine
 * Using the VS Code [Docker](https://code.visualstudio.com/docs/containers/overview) and [Remote Development](https://code.visualstudio.com/docs/remote/remote-overview) extension is recommended, to attach shells or VS code itself to the container.
 * Note that [franka_ros2](https://frankaemika.github.io/docs/franka_ros2.html#) is currently (08/2023) beta software and might yet encounter issues.
-
-![Screenshot 2024-08-07 222542](https://github.com/user-attachments/assets/6473fe97-a34c-4f46-87c3-77ae1cc42b18)
-
+* 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6473fe97-a34c-4f46-87c3-77ae1cc42b18" width="300" alt="Screenshot 2024-08-07 222542">
+</p>
