@@ -16,22 +16,24 @@ RUN apt-get update -y &&\
 ### ROS 2 Setup
 RUN apt-get update -y &&\
     apt-get install -y --allow-unauthenticated \
-        ros-humble-control-msgs \
-        ros-humble-xacro \
+        ros-humble-ament-cmake \
         ros-humble-ament-cmake-clang-format \
-        ros-humble-ament-clang-format \
-        ros-humble-ament-flake8 \
-        ros-humble-ament-cmake-clang-tidy \
         ros-humble-angles \
+        ros-humble-ros2-controllers \
         ros-humble-ros2-control \
-        ros-humble-realtime-tools \
-        ros-humble-control-toolbox \    
-        ros-humble-controller-manager \
-        ros-humble-hardware-interface \
-        ros-humble-generate-parameter-library \
-        ros-humble-controller-interface \
         ros-humble-ros2-control-test-assets \
-        ros-humble-controller-manager &&\
+        ros-humble-controller-manager \
+        ros-humble-control-msgs \
+        ros-humble-control-toolbox \
+        ros-humble-generate-parameter-library \
+        ros-humble-joint-state-publisher \
+        ros-humble-joint-state-publisher-gui \
+        ros-humble-moveit \
+        ros-humble-pinocchio \
+        ros-humble-realtime-tools \
+        ros-humble-xacro \
+        ros-humble-hardware-interface \
+        ros-humble-ros-gz &&\
     rm -rf /var/lib/apt/lists/*
 
 ### Pip installs

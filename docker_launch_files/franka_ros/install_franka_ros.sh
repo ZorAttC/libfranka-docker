@@ -3,6 +3,8 @@
 ### LIBFRANKA
 cd /docker_volume/libfranka
 
+# make sure that libfranka is checked out to the compatible branch
+# see https://frankaemika.github.io/docs/compatibility.html
 if [ ! -d "build" ]
 then 
     mkdir build && cd build
