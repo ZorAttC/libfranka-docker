@@ -15,3 +15,6 @@
 [submodule "docker_volume/ros2_ws/src/franka_description"]
 	path = docker_volume/ros2_ws/src/franka_description
 	url = https://github.com/frankaemika/franka_description
+[submodule "docker_volume/libfranka_v0.13.2"]
+	path = docker_volume/libfranka_v0.13.2
+	url = https://github.com/frankaemika/libfranka.git
