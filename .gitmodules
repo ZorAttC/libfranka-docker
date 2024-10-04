@@ -14,4 +14,4 @@
 	# check https://frankaemika.github.io/docs/franka_ros2.html
 [submodule "docker_volume/ros2_ws/src/franka_description"]
 	path = docker_volume/ros2_ws/src/franka_description
-	url = https://github.com/frankaemika/franka_description.git
+	url = https://github.com/frankaemika/franka_description
