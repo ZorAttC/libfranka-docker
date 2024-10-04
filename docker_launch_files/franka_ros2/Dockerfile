@@ -36,26 +36,12 @@ RUN apt-get update -y &&\
         ros-humble-ros-gz &&\
     rm -rf /var/lib/apt/lists/*
 
-### Pip installs
-# RUN python3 -m pip install -U \
-#         argcomplete \
-#         flake8-blind-except \
-#         flake8-builtins \
-#         flake8-class-newline \
-#         flake8-comprehensions \
-#         flake8-deprecated \
-#         flake8-docstrings \
-#         flake8-import-order \
-#         flake8-quotes \
-#         pytest-repeat \
-#         pytest-rerunfailures \
-#         pytest
-
-### Install display mounting tools
+### Install python extensions for display mounting and building
 RUN apt-get update -y &&\
     apt-get install -y  \
         python3-tk \
-        python3-gi-cairo
+        python3-gi-cairo \
+        python3-colcon-common-extensions
     
 WORKDIR /docker_volume
 
