@@ -5,14 +5,14 @@ cd /docker_volume/libfranka
 
 # make sure that libfranka is checked out to the compatible branch
 # see https://frankaemika.github.io/docs/compatibility.html
-if [ ! -d "build" ]
-then 
-    mkdir build && cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF  ..
-    cmake --build . -j$(nproc)
-    cpack -G DEB
-    sudo dpkg -i libfranka-*.deb
-fi
+# if [ ! -d "build" ]
+# then 
+#     mkdir build && cd build
+#     cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF  ..
+#     cmake --build . -j$(nproc)
+#     cpack -G DEB
+#     sudo dpkg -i libfranka-*.deb
+# fi
 
 
 ### FRANKA ROS
